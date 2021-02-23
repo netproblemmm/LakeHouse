@@ -18,7 +18,7 @@ public class myGUI : MonoBehaviour
         labelHPRect = new Rect(50 + (MaxHealth - 50) / 2 - _healthString.Length / 2, 20, 200, 50);
         valueHPRect = new Rect(50, 50, Health, 50);
         myColor = RGBSlider(new Rect(50, 100, 200, 20), myColor, sliderMinValueRGB);
-        sliderMinValueRGB = RowSlider(new Rect(50, 160, 200, 20), 30.0f, sliderMinValueRGB, 200.0f, "minValue");
+        sliderMinValueRGB = RowSlider(new Rect(50, 160, 200, 20), 30.0f, sliderMinValueRGB, 200.0f, "rgbA");
     }
 
     private void OnGUI()
@@ -29,7 +29,7 @@ public class myGUI : MonoBehaviour
 
         Health = GUI.HorizontalSlider(valueHPRect, Health, 0.0f, MaxHealth);
         myColor = RGBSlider(new Rect(50, 100, 200, 20), myColor, sliderMinValueRGB);
-        sliderMinValueRGB = RowSlider(new Rect(50, 160, 200, 20), 30.0f, sliderMinValueRGB, 200.0f, "minValue");
+        sliderMinValueRGB = RowSlider(new Rect(50, 160, 200, 20), 30.0f, sliderMinValueRGB, 200.0f, "rgbA");
     }
 
     Color RGBSlider(Rect screenRect, Color rgb, float minValue)
